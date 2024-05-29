@@ -4,6 +4,7 @@ import com.example.auth.dao.request.SignUpRequest;
 import com.example.auth.dao.request.SigninRequest;
 import com.example.auth.dao.response.AuthResponse;
 import com.example.auth.services.AuthService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
+@Tag(name = "Auth")
 public class AuthenticationController {
     private final AuthService authService;
     @PostMapping("/signup")
